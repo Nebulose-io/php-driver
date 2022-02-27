@@ -336,8 +336,9 @@ php_driver_parse_ip_address(char *in, CassInet *inet TSRMLS_DC)
     if (state == STATE_END) {
       if (type == TOKEN_END)
         break;
-      else
+      else {
         EXPECTING_TOKEN("the end of address");
+      }
     }
   }
 
